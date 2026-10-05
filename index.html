@@ -513,6 +513,50 @@
   }
   .refs p{ text-align:justify; }
   .refs strong{ color:var(--ink); }
+
+  /* ---------- RECURSOS / ENLACES OFICIALES ---------- */
+  .resources-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    gap:14px;
+    margin-top:10px;
+  }
+  .resource-card{
+    display:block;
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    border-radius:6px;
+    padding:16px 18px;
+    text-decoration:none;
+    color:var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .resource-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+    border-color:var(--accent);
+  }
+  .resource-card .rc-title{
+    font-weight:600;
+    font-size:15px;
+    margin-bottom:5px;
+    color:var(--ink);
+  }
+  .resource-card .rc-desc{
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    text-align:justify;
+  }
+  .resource-card .rc-link{
+    display:inline-block;
+    margin-top:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--accent);
+    word-break:break-all;
+  }
   footer{
     max-width:1000px; margin:0 auto; padding:0 24px 60px;
     font-family:'IBM Plex Mono', monospace;
@@ -888,6 +932,53 @@
   </section>
 
 </div><!-- /view-basededatos -->
+
+  <section id="recursos" class="no-print">
+    <h2 class="section-title"><span class="idx">Rec.</span> Recursos y organismos oficiales</h2>
+    <p style="text-align:justify; margin-bottom:14px; color:var(--ink-soft);">Enlaces a las tablas de composición química y organismos oficiales de referencia en Argentina, para consulta, actualización o contraste de datos.</p>
+    <div class="resources-grid">
+      <a class="resource-card" href="https://bancos.salud.gob.ar/recurso/tabla-de-composicion-quimica-de-alimentos-para-argentina-compilacion-para-ennys-2" target="_blank" rel="noopener">
+        <div class="rc-title">SARA 2 — Ministerio de Salud de la Nación</div>
+        <div class="rc-desc">Tabla de composición química de alimentos para Argentina, compilación para la ENNyS 2. Fuente oficial utilizada en esta calculadora.</div>
+        <span class="rc-link">bancos.salud.gob.ar</span>
+      </a>
+      <a class="resource-card" href="https://ri.conicet.gov.ar/handle/11336/258411" target="_blank" rel="noopener">
+        <div class="rc-title">SARA 2 — Repositorio CONICET</div>
+        <div class="rc-desc">Versión con DOI del mismo documento SARA 2, útil para citar en trabajos académicos.</div>
+        <span class="rc-link">ri.conicet.gov.ar</span>
+      </a>
+      <a class="resource-card" href="https://www.fao.org/food-composition/tables-and-databases/detail/(argentina--2022)-sara-2---tabla-de-composici%C3%B3n-qu%C3%ADmica-de-alimentos-para-argentina--compilaci%C3%B3n-para-ennys-2/en" target="_blank" rel="noopener">
+        <div class="rc-title">FAO / INFOODS</div>
+        <div class="rc-desc">Base internacional de tablas de composición de alimentos, donde SARA 2 figura registrada como fuente para Argentina.</div>
+        <span class="rc-link">fao.org/food-composition</span>
+      </a>
+      <a class="resource-card" href="https://www.argentina.gob.ar/anmat/codigoalimentario" target="_blank" rel="noopener">
+        <div class="rc-title">Código Alimentario Argentino — ANMAT/INAL</div>
+        <div class="rc-desc">Normativa oficial sobre rotulado nutricional, definiciones y requisitos de composición de alimentos en Argentina.</div>
+        <span class="rc-link">argentina.gob.ar/anmat</span>
+      </a>
+      <a class="resource-card" href="https://www.argentina.gob.ar/salud" target="_blank" rel="noopener">
+        <div class="rc-title">Ministerio de Salud de la Nación</div>
+        <div class="rc-desc">Organismo que publica y actualiza las tablas SARA, guías alimentarias y normativa sanitaria nacional.</div>
+        <span class="rc-link">argentina.gob.ar/salud</span>
+      </a>
+      <a class="resource-card" href="https://www.unsa.edu.ar" target="_blank" rel="noopener">
+        <div class="rc-title">Universidad Nacional de Salta</div>
+        <div class="rc-desc">Facultad de Ciencias de la Salud, Carrera de Nutrición — Cátedra de Dietoterapia y Práctica Hospitalaria del Adulto.</div>
+        <span class="rc-link">unsa.edu.ar</span>
+      </a>
+      <a class="resource-card" href="https://nutrinfo.com" target="_blank" rel="noopener">
+        <div class="rc-title">NUTRINFO</div>
+        <div class="rc-desc">Vademécum de productos y recursos para profesionales de la nutrición, utilizado como fuente complementaria en esta calculadora.</div>
+        <span class="rc-link">nutrinfo.com</span>
+      </a>
+      <a class="resource-card" href="https://saludvirtual.unsa.edu.ar/login/index.php" target="_blank" rel="noopener">
+        <div class="rc-title">Salud Virtual — UNSa</div>
+        <div class="rc-desc">Campus virtual de la Facultad de Ciencias de la Salud, UNSa, para el acceso a materiales y actividades de la cátedra.</div>
+        <span class="rc-link">saludvirtual.unsa.edu.ar</span>
+      </a>
+    </div>
+  </section>
 
   <section id="referencias">
     <h2 class="section-title"><span class="idx">Ref.</span> Referencias</h2>
